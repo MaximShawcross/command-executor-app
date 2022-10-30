@@ -1,4 +1,6 @@
 import { PromptService } from './core/prompt/prompt.service';
+import StreamProxyHandler from './core/handlers/stream.handler';
+import ConsoleLogger from './out/console.logger/console.logger';
 
 export class App {
 	async run() {
@@ -9,3 +11,4 @@ export class App {
 
 const app = new App();
 app.run();
+
