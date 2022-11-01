@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// get an a stream, and then give it to logger
 class StreamProxyHandler {
     constructor(logger) {
         this.logger = logger;
