@@ -1,5 +1,3 @@
-import { IFfmpegCommandVBuilder } from "../ffmpef.builder.types"
-
 class FfmpegBuilder {
     private inputPath: string;
     private outputPath: string;
@@ -37,5 +35,5 @@ class FfmpegBuilder {
     }
 
 }
-
-console.log(new FfmpegBuilder().input('/input-path').setVideoSize(1920, 1080).outPut('//output-path'));
+export default FfmpegBuilder;
+// console.log(new FfmpegBuilder().input('/input-path').setVideoSize(1920, 1080).outPut('//output-path'));

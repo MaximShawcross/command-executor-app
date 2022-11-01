@@ -1,6 +1,6 @@
 import { ChildProcessWithoutNullStreams } from "child_process";
 import IStreamLoger from "../handlers/stream-logger.interface";
-import ICommandExec from "./command.types";
+import { ICommandExec } from "./command.types";
 
 //generic for prompt method
 abstract class CommandExecutor<Input> {
