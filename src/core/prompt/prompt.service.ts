@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import { PromptType } from './prompt.types';
 
-export class PromptService {
+class PromptService {
 	public async input<T>(message: string, type: PromptType) {
 		const { result } = await inquirer.prompt<{ result: T }>([
 			{
@@ -13,3 +13,5 @@ export class PromptService {
 		return result;
 	}
 }
+
+export default PromptService
