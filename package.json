@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/MaximShawcross/command-executor-app/issues"
   },
-  "homepage": "https://github.com/MaximShawcross/command-executor-app#readme"
+  "homepage": "https://github.com/MaximShawcross/command-executor-app#readme",
+  "devDependencies": {
+    "@types/inquirer": "^8.2.0",
+    "@types/node": "^18.11.7"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
