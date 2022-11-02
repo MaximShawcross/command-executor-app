@@ -6,10 +6,10 @@ class StreamProxyHandler {
     }
     procesOutput(stream) {
         stream.stdout.on('data', (data) => {
-            this.logger.log(data);
+            this.logger.log(data.toString());
         });
         stream.stderr.on('error', (err) => {
-            this.logger.error(err.message);
+            this.logger.error(err.toString());
         });
         stream.on("close", () => {
             this.logger.end();

@@ -26,4 +26,4 @@ class FfmpegBuilder {
         return args;
     }
 }
-console.log(new FfmpegBuilder().input('/input-path').setVideoSize(1920, 1080).outPut('//output-path'));
+exports.default = FfmpegBuilder;

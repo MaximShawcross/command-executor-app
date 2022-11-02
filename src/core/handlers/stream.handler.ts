@@ -8,11 +8,11 @@ class StreamProxyHandler {
 
     procesOutput(stream: ChildProcessWithoutNullStreams) {
         stream.stdout.on('data', (data: any) => {
-            this.logger.log(data);
+            this.logger.log(data.toString());
         });
 
         stream.stderr.on('error', (err) => {
-            this.logger.error(err.message);
+            this.logger.error(err.toString());
         })
 
         stream.on("close", () => {

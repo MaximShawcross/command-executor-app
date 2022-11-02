@@ -8,17 +8,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.App = void 0;
-const prompt_service_1 = require("./core/prompt/prompt.service");
+const ffmpeg_exec_1 = __importDefault(require("./commands/ffmpeg/ffmpeg.exec"));
+const console_logger_1 = __importDefault(require("./out/console.logger/console.logger"));
 class App {
     run() {
         return __awaiter(this, void 0, void 0, function* () {
-            const res = yield (new prompt_service_1.PromptService()).input('Число', 'number');
-            console.log(res);
+            new ffmpeg_exec_1.default(console_logger_1.default.get()).execute();
         });
     }
 }
-exports.App = App;
 const app = new App();
 app.run();
